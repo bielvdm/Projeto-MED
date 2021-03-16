@@ -1,8 +1,7 @@
 --DDL
+CREATE DATABASE MedGroup
 
-CREATE DATABASE Med
-GO
-USE Med
+USE MedGroup
 
 CREATE TABLE TipoUsuario (
 
@@ -40,7 +39,7 @@ IdMedico           INT PRIMARY KEY IDENTITY,
 IdClinica		   INT FOREIGN KEY REFERENCES Clinica (IdClinica),
 IdEspecializacao   INT FOREIGN KEY REFERENCES Especializacao(IdEspecializacao),
 NomeMedico         VARCHAR(200) NOT NULL,
-CRM				   INT NOT NULL
+CRM				   CHAR(6) NOT NULL
 
 )
 
@@ -58,13 +57,14 @@ CREATE TABLE Cliente (
 IdUsuario		INT FOREIGN KEY REFERENCES Usuario (IdUsuario),
 IdCliente		INT PRIMARY KEY IDENTITY,
 NomeCliente		VARCHAR (200),
-RG				INT NOT NULL,
-CPF				INT NOT NULL,
+RG				CHAR(9) NOT NULL,
+CPF				CHAR(11) NOT NULL,
 Endereco		VARCHAR(200) NOT NULL,
 DataNascimento  DATE NOT NULL,
 TelefoneCliente INT NOT NULL
 
 )
+
 
 CREATE TABLE Consulta (
 
