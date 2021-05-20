@@ -65,16 +65,21 @@ namespace SPMedicalGroup_WebAPI.Controllers
         public IActionResult Post(Usuario Dados, [FromForm] WelcomeRequest request, string emaildapessoa)
         {
             try
-            {
-                     Usuario usuarioBuscado = _UsuarioRepository.BuscarEmail(Dados.Email);
-
+            {    
+                Usuario usuarioBuscado = _UsuarioRepository.BuscarEmail(Dados.Email);
+                
+                if(usuarioBuscado == null)
+                {
                     _UsuarioRepository.Cadastrar(Dados);
 
-                    emaildapessoa = usuarioBuscado.Email;
+                    emaildapessoa = Dados.Email;
 
                     _mailService.SendWelcomeEmailAsync(request, emaildapessoa);
 
-                    return Created(HttpStatusCode.Created.ToString(), $"Usuário com o email '{Dados.Email}' cadastrados");
+                    return Created(HttpStatusCode.Created.ToString(), $"Usuário com o email {Dados.Email} cadastrados");
+                }
+                  
+                return BadRequest("E-mail existente");
  
             }
             catch (Exception ex)
