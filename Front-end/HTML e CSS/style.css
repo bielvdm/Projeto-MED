@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css');
+
+*{
+    margin: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;  
+    height: 12px;             
+}
+
+body::-webkit-scrollbar-track {
+    background: #1083e970; 
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #026fcfc0;  
+}
+
+.coluna{
+    display: flex;
+    flex-direction: column;
+}
+
+.dis{
+    display: flex;
+}
+
+.spa{
+    justify-content: space-between;
+}
+
+.spaa{
+    justify-content: space-around;
+}
+
+.ali{
+    align-items: center;
+}
+
+.cen{
+    justify-content: center;
+}
+
+/* banner */
+
+.banner{
+    width: 100%;
+    height: 350px;
+    background-color: #c4c4c415;
+}
+
+.content-banner{
+    width: 40%;
+    margin-left: 15%;
+    height: 310px;
+    font-family: 'Montserrat';
+    color: rgb(46, 46, 46);
+    margin-top: 15px;
+}
+
+.content-banner img{
+    width: 40%;
+}
+
+.fotobanner{
+    width: 500px;
+    height: 300px;
+}
+
+.fotobanner img{
+    width: 100%;
+}
+
+.content-banner button {
+    width: 140px;
+    height: 48px;
+    font-family: 'Montserrat';
+    font-size: 13px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: #0270CF;
+    margin-bottom: 10px;
+}
+
+/* login */
+
+.inputs button {
+    width: 120px;
+    height: 42px;
+    font-family: 'Montserrat';
+    font-size: 13px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: #0270CF;
+    margin-bottom: 10px;
+}
+
+.inputs input{
+    width: 310px;
+    height: 42px;
+    border: none;
+    border-radius: 5px;
+    outline: 0;
+    background-color: #c4c4c481;
+    padding-left: 20px;
+    font-size: 13px;
+    font-family: 'Montserrat';
+}
+
+.inputs {
+    height: 260px;
+    margin-right: 20%;
+}
+
+.inputs h2{
+    font-size: 17px;
+}
+
+.inputs p{
+    font-size: 11px;
+    margin-top: -30px;
+}
+
+.login img{
+    width: 30%;
+}
+
+.login{
+    width: 100%;
+    max-height: 320px;
+    background-color: white;
+    font-family: 'Montserrat';
+}
+
+/* especialides */
+
+.cardespecialidade2, .cardespecialidade1 {
+    background-color: #4ee1b5d3;
+    width: 170px;
+    height: 250px;
+}
+
+.especialidades img{
+    width: 15%;
+}
