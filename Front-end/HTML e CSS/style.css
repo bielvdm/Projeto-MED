@@ -44,18 +44,22 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
 }
 
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* tela login */
+
 /* banner */
 
 .banner{
     width: 100%;
-    height: 350px;
+    height: 270px;
     background-color: #c4c4c415;
 }
 
 .content-banner{
     width: 40%;
     margin-left: 15%;
-    height: 310px;
+    height: 230px;
     font-family: 'Montserrat';
     color: rgb(46, 46, 46);
     margin-top: 15px;
@@ -66,8 +70,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .fotobanner{
-    width: 500px;
-    height: 300px;
+    width: 370px;
+    height: 170px;
 }
 
 .fotobanner img{
@@ -75,8 +79,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .content-banner button {
-    width: 140px;
-    height: 48px;
+    width: 120px;
+    height: 42px;
     font-family: 'Montserrat';
     font-size: 13px;
     color: white;
@@ -97,11 +101,11 @@ body::-webkit-scrollbar-thumb {
     border: none;
     border-radius: 5px;
     background-color: #0270CF;
-    margin-bottom: 10px;
+    margin-bottom: -30px;
 }
 
 .inputs input{
-    width: 310px;
+    width: 300px;
     height: 42px;
     border: none;
     border-radius: 5px;
@@ -113,38 +117,250 @@ body::-webkit-scrollbar-thumb {
 }
 
 .inputs {
-    height: 260px;
+    height: 300px;
     margin-right: 20%;
 }
 
 .inputs h2{
     font-size: 17px;
+    margin-top: 27px;
 }
 
 .inputs p{
     font-size: 11px;
-    margin-top: -30px;
 }
 
 .login img{
-    width: 30%;
+    width: 27%;
 }
 
 .login{
     width: 100%;
-    max-height: 320px;
-    background-color: white;
+    height: 285px;
     font-family: 'Montserrat';
 }
 
 /* especialides */
 
-.cardespecialidade2, .cardespecialidade1 {
+/* .cardespecialidade1{
     background-color: #4ee1b5d3;
-    width: 170px;
-    height: 250px;
+    padding: 25px;
 }
 
+.cardespecialidade2 {
+    background-color: #026fcfd3;
+    padding: 25px;
+}
+
+.cardespecialidade2, .cardespecialidade1 {
+    width: 100%;
+    height: 250px;
+    border-radius: 6px;
+    color: white;
+    font-family: 'Montserrat';
+}
+
+.fotoespecialidade{
+    width: 100px;
+} */
+
 .especialidades img{
-    width: 15%;
+    width: 17%;
+    margin-bottom: 40px;
+}
+
+.especialidades{
+    margin-bottom: 35px;
+}
+
+.content-especialidades{
+    width: 96%;
+}
+
+.content-especialidades img{
+    border-radius: 8px;
+}
+
+.slick-slide {
+    margin: 0 35px;
+}
+
+.slick-list {
+    margin: 0 -35px;
+}
+
+/* footer */
+
+footer{
+    width: 100%;
+    height: 100px;
+    background-image: url('img/—Pngtree—vector\ white\ background\ with\ abstract_991007.png');
+    background-size: 50%;
+    font-family: 'Montserrat';
+    color: #1b1d1f;
+}
+
+footer h4{
+    width: 260px;
+}
+
+.logoFooter{
+    width: 200px;
+}
+
+.contatos{
+    width: 180px;
+}
+
+.contatos img{
+    width: 20px;
+    margin-right: 10px;
+}
+
+.contato{
+    height: 80px;
+    text-align: center;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* tela adm */
+
+/* header */
+
+.header{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    font-family: 'montserrat';
+    padding-top: 15px;
+}
+
+.header a{
+    margin-left: 30px;
+    text-decoration: none;
+    color: rgb(17, 17, 17);
+}
+
+/* content principal */
+
+.opcoes button{
+    font-family: 'montserrat';
+    font-size: 15px;
+    width: 165px;
+    height: 45px;
+    border: none;
+    border-radius: 7px;
+    background-color: #0270CF;
+    outline: 0;
+    color: white;
+    margin-right: 15px;
+}
+
+.opcoes{
+    font-family: 'montserrat';
+    color: rgb(26, 26, 26);
+    width: 100%;
+    height: 250px;
+    margin-bottom: 65px;
+}
+
+.content-principal-adm img{
+    width: 23.8%;
+}
+
+.opcoes h1{
+    margin-bottom: 20px;
+    margin-right: 15px;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* tela preenchidas  */
+
+.inputs-cadastro{
+    width: 70%;
+    height: 450px;
+    padding-bottom: 30px;
+}
+
+.inputs-cadastro input{
+    width: 280px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    outline: 0;
+    background-color: #c4c4c481;
+    padding-left: 20px;
+    font-size: 13px;
+    font-family: 'Montserrat';
+}
+
+.inputs-cadastro button {
+    width: 100px;
+    height: 35px;
+    font-family: 'Montserrat';
+    font-size: 13px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: #0270CF;
+}
+
+.content-principal-cadastro {
+    align-items: flex-end;
+    font-family: 'montserrat';
+}
+
+.content-principal-cadastro img{
+    width: 400px;
+    height: 280px;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* listar consultas adm  */
+
+.header input{
+    width: 280px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    outline: 0;
+    background-color: #c4c4c481;
+    padding-left: 20px;
+    font-size: 13px;
+    font-family: 'Montserrat';
+}
+
+.pesquisaListar img{
+    position: absolute;
+    margin-left: 260px;
+}
+
+.ListaPrincipal{
+    width: 90%;
+    height: 100%;
+    border-radius: 8px;
+    background-image: url("img/Background\ listar\ adm.png");
+    background-size: cover;
+    font-family: 'montserrat';
+    color: white;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+.ListaPrincipal table{
+    width: 100%;
+    border-spacing:10px;
+}
+
+.its{
+    background-color: rgba(255, 255, 255, 0.800);
+    border-radius: 5px;
+    color: #1b1d1f;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    height: 27px;
+    text-align: center;
 }
