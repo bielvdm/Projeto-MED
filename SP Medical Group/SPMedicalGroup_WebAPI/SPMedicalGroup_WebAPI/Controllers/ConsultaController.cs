@@ -105,14 +105,14 @@ namespace SPMedicalGroup_WebAPI.Controllers
 
         }
 
-        [Authorize(Roles = "2")]
+        
         [HttpGet("suas")]
-        public IActionResult ListarProprias ()
+        public IActionResult ListarProprias()
         {
             try
             {
-                int idCliente = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
-                return Ok(_consultaRepository.ListarProprias(idCliente));
+                int idDoCliente = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
+                return Ok(_consultaRepository.ListarProprias(idDoCliente));
             }
             catch (Exception ex)
             {

@@ -52,15 +52,20 @@ namespace SPMedicalGroup_WebAPI.Repositories
 
         public List<Consultum> ListarTodos()
         {
-            return ctx.Consulta.ToList();
+            return ctx.Consulta
+                .Include(c => c.IdClienteNavigation)
+                .Include(c => c.IdMedicoNavigation)
+                .Include(c => c.IdSituacaoNavigation)
+                .ToList();
         }
 
         public List<Consultum> ListarProprias (int id)
         {
             return ctx.Consulta
                 .Include(c => c.IdSituacaoNavigation)
+                .Include(c => c.IdMedicoNavigation)
                 .Where(c => c.IdCliente == id)
                 .ToList();
         }
     }
-}
+} 

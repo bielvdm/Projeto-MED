@@ -41,7 +41,8 @@ namespace SPMedicalGroup_WebAPI.Controllers
                 {
                     new Claim (JwtRegisteredClaimNames.Email, Login.Email),
                     new Claim (JwtRegisteredClaimNames.Jti, Login.IdUsuario.ToString()),
-                    new Claim(ClaimTypes.Role, Login.IdTipo.ToString())
+                    new Claim(ClaimTypes.Role, Login.IdTipo.ToString()),
+                    new Claim ("role", Login.IdTipo.ToString())
                 };
 
                 var Key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("medico-webapi-projeto"));

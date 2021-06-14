@@ -364,3 +364,70 @@ footer h4{
     height: 27px;
     text-align: center;
 }
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* tela consulta medico */
+
+.content-consulta{
+    width: 200px;
+    height: 210px;
+    background-image: url("img/Foto\ card\ consulta.png");
+    color: white;
+    font-family: 'montserrat';
+    font-size: 19px;
+    padding-left: 20px;
+    border-radius: 8px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.content-principal-medico{
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 30px;
+    min-height: 413px;
+    align-items: flex-end;
+}
+
+.fotoMedico{
+    width: 310px;
+    height: 190px;
+}
+
+.div-principal-consulta{
+    width: 71.3%;
+    min-height: 413px;
+    flex-wrap: wrap;
+}
+
+.content-consulta a{
+    margin-left: 75%;
+    color: white;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+.linhaConsulta{
+    margin-bottom: 10px;
+}
+
+.linhaConsulta img{
+    margin-right: 15px;
+}
+
+.linhaDescricao img{
+    margin-right: 15px;
+}
+
+.linhaDescricao{
+    align-items: flex-start;
+    width: 190px;
+    height: 70px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.linhaDescricao p {
+    font-size: 14px;
+}

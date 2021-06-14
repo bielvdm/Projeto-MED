@@ -121,3 +121,8 @@ C:\Users\adm\Desktop\Projeto-MED\SP Medical Group\SPMedicalGroup_WebAPI\SPMedica
 C:\Users\adm\Desktop\Projeto-MED\SP Medical Group\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\ref\SPMedicalGroup_WebAPI.dll
 C:\Users\adm\Desktop\Projeto-MED\SP Medical Group\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.pdb
 C:\Users\adm\Desktop\Projeto-MED\SP Medical Group\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.genruntimeconfig.cache
+C:\Users\adm\Desktop\Projeto-MED\SP Medical Group\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\adm\Desktop\Projeto-MED\SP Medical Group\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\adm\Desktop\Projeto-MED\SP Medical Group\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\adm\Desktop\Projeto-MED\SP Medical Group\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\adm\Desktop\Projeto-MED\SP Medical Group\SPMedicalGroup_WebAPI\SPMedicalGroup_WebAPI\obj\Debug\net5.0\SPMedicalGroup_WebAPI.MvcApplicationPartsAssemblyInfo.cs

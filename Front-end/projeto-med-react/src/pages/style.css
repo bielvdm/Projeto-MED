@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css');
+
+*{
+    margin: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;  
+    height: 12px;             
+}
+
+body::-webkit-scrollbar-track {
+    background: #1083e970; 
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #026fcfc0;  
+}
+
+.coluna{
+    display: flex;
+    flex-direction: column;
+}
+
+.dis{
+    display: flex;
+}
+
+.spa{
+    justify-content: space-between;
+}
+
+.spaa{
+    justify-content: space-around;
+}
+
+.ali{
+    align-items: center;
+}
+
+.cen{
+    justify-content: center;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* tela login */
+
+/* banner */
+
+.banner{
+    width: 100%;
+    height: 270px;
+    background-color: #c4c4c415;
+}
+
+.content-banner{
+    width: 40%;
+    margin-left: 15%;
+    height: 230px;
+    font-family: 'Montserrat';
+    color: rgb(46, 46, 46);
+    margin-top: 15px;
+}
+
+.content-banner img{
+    width: 40%;
+}
+
+.fotobanner{
+    width: 370px;
+    height: 170px;
+}
+
+.fotobanner img{
+    width: 100%;
+}
+
+.content-banner button {
+    width: 120px;
+    height: 42px;
+    font-family: 'Montserrat';
+    font-size: 13px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: #0270CF;
+    margin-bottom: 10px;
+}
+
+/* login */
+
+.inputs button {
+    width: 120px;
+    height: 42px;
+    font-family: 'Montserrat';
+    font-size: 13px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: #0270CF;
+    
+}
+
+.inputs input{
+    width: 300px;
+    height: 42px;
+    border: none;
+    border-radius: 5px;
+    outline: 0;
+    background-color: #c4c4c481;
+    padding-left: 20px;
+    font-size: 13px;
+    font-family: 'Montserrat';
+}
+
+.inputs {
+    height: 300px;
+    margin-right: 20%;
+}
+
+.inputs h2{
+    font-size: 17px;
+    margin-top: 27px;
+}
+
+.inputs p{
+    font-size: 11px;
+}
+
+.login img{
+    width: 27%;
+}
+
+.login{
+    width: 100%;
+    height: 285px;
+    font-family: 'Montserrat';
+}
+
+/* especialides */
+
+
+.cardespecialidade1 {
+    width:10%;
+    height: 85px;
+    border-radius: 6px;
+    background-image: url("../assets/img/Foto\ card\ consulta.png");
+    background-size: cover;
+    font-size: 22px;
+    color: white;
+    font-family: 'Montserrat';
+}
+
+.especialidades img{
+    width: 20%;
+    margin-top: 20px;
+}
+
+.especialidades{
+    margin-bottom: 35px;
+}
+
+.content-especialidades{
+    width: 96%;
+}
+
+.content-especialidades img{
+    border-radius: 8px;
+}
+
+.slick-slide {
+    margin: 0 35px;
+}
+
+.slick-list {
+    margin: 0 -35px;
+}
+
+/* footer */
+
+footer{
+    width: 100%;
+    height: 100px;
+    background-image: url("../assets/img/—Pngtree—vector\ white\ background\ with\ abstract_991007.png");
+    background-size: 50%;
+    font-family: 'Montserrat';
+    color: #1b1d1f;
+}
+
+footer h4{
+    width: 260px;
+}
+
+.logoFooter{
+    width: 200px;
+}
+
+.contatos{
+    width: 180px;
+}
+
+.contatos img{
+    width: 20px;
+    margin-right: 10px;
+}
+
+.contato{
+    height: 80px;
+    text-align: center;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* tela adm */
+
+/* header */
+
+.header{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    font-family: 'montserrat';
+    padding-top: 15px;
+}
+
+.header a{
+    margin-left: 30px;
+    text-decoration: none;
+    color: rgb(17, 17, 17);
+}
+
+/* content principal */
+
+.opcoes button{
+    font-family: 'montserrat';
+    font-size: 15px;
+    width: 165px;
+    height: 45px;
+    border: none;
+    border-radius: 7px;
+    background-color: #0270CF;
+    outline: 0;
+    color: white;
+    margin-right: 15px;
+}
+
+.opcoes{
+    font-family: 'montserrat';
+    color: rgb(26, 26, 26);
+    width: 100%;
+    height: 250px;
+    margin-bottom: 65px;
+}
+
+.content-principal-adm img{
+    width: 23.8%;
+}
+
+.opcoes h1{
+    margin-bottom: 20px;
+    margin-right: 15px;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* tela preenchidas  */
+
+.inputs-cadastro{
+    width: 70%;
+    height: 410px;
+    padding-bottom: 30px;
+}
+
+.input{
+    width: 280px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    outline: 0;
+    background-color: #c4c4c481;
+    padding-left: 20px;
+    font-size: 13px;
+    font-family: 'Montserrat';
+}
+
+.select{
+    width: 300px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    outline: 0;
+    background-color: #c4c4c481;
+    padding-left: 20px;
+    font-size: 13px;
+    font-family: 'Montserrat';
+}
+
+.inputs-cadastro button {
+    width: 100px;
+    height: 35px;
+    font-family: 'Montserrat';
+    font-size: 13px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: #0270CF;
+}
+
+.content-principal-cadastro {
+    align-items: flex-end;
+    font-family: 'montserrat';
+}
+
+.content-principal-cadastro img{
+    width: 400px;
+    height: 280px;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* listar consultas adm  */
+
+.header input{
+    width: 280px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    outline: 0;
+    background-color: #c4c4c481;
+    padding-left: 20px;
+    font-size: 13px;
+    font-family: 'Montserrat';
+}
+
+.pesquisaListar img{
+    position: absolute;
+    margin-left: 260px;
+}
+
+.ListaPrincipal{
+    width: 90%;
+    height: 100%;
+    border-radius: 8px;
+    background-image: url("../assets/img/Background\ listar\ adm.png");
+    background-size: cover;
+    font-family: 'montserrat';
+    color: white;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+.ListaPrincipal table{
+    width: 100%;
+    border-spacing:10px;
+}
+
+.its{
+    background-color: rgba(255, 255, 255, 0.800);
+    border-radius: 5px;
+    color: #1b1d1f;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    height: 27px;
+    text-align: center;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* tela consulta medico */
+
+.content-consulta{
+    width: 200px;
+    height: 210px;
+    background-image: url("../assets/img/Foto\ card\ consulta.png");
+    color: white;
+    font-family: 'montserrat';
+    font-size: 19px;
+    padding-left: 20px;
+    border-radius: 8px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.content-principal-medico{
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 30px;
+    min-height: 413px;
+    align-items: flex-end;
+}
+
+.fotoMedico{
+    width: 310px;
+    height: 190px;
+}
+
+.div-principal-consulta{
+    width: 71.3%;
+    min-height: 413px;
+    flex-wrap: wrap;
+}
+
+.content-consulta a{
+    margin-left: 75%;
+    color: white;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+.linhaConsulta{
+    margin-bottom: 10px;
+}
+
+.linhaConsulta img{
+    margin-right: 15px;
+}
+
+.linhaDescricao img{
+    margin-right: 15px;
+}
+
+.linhaDescricao{
+    align-items: flex-start;
+    width: 190px;
+    height: 70px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.linhaDescricao p {
+    font-size: 14px;
+}

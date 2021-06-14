@@ -37,11 +37,24 @@ namespace SPMedicalGroup_WebAPI
              {
                  // Ignora os loopings nas consultas
                  options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
-                 // Ignora valores nulos ao fazer junções nas consultas
+                 // Ignora valores nulos ao fazer juncoes nas consultas
                  options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
              });
 
             services.AddTransient<IMailService, Services.MailService>();
+
+            services.AddSwaggerGen();
+
+            //cors lÃ¡
+            // services.AddCors(options => {
+            //     options.AddPolicy("CorsPolicy",
+            //         builder => {
+            //             builder.WithOrigins("http://localhost:3000")
+            //                                                         .AllowAnyHeader()
+            //                                                         .AllowAnyMethod();
+            //         }
+            //     );
+            // });
 
             services.Configure<MailSettings>(Configuration.GetSection("MailSettings"));
 
@@ -79,9 +92,23 @@ namespace SPMedicalGroup_WebAPI
 
             app.UseRouting();
 
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "SPMedicalGroup.webApi");
+                c.RoutePrefix = string.Empty;
+            });
+
             app.UseAuthentication();
 
             app.UseAuthorization();
+
+
+            //negocio do cors
+            // app.UseCors("CorsPolicy");
+
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
             app.UseEndpoints(endpoints =>
             {
