@@ -123,5 +123,23 @@ namespace SPMedicalGroup_WebAPI.Controllers
                 });
             }
         }
+
+        [HttpGet("medicos")]
+        public IActionResult ListarPropriasMedicos()
+        {
+            try
+            {
+                int idDoMedico = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
+                return Ok(_consultaRepository.ListarPropriasMedicos(idDoMedico));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new
+                {
+                    mensagem="Necessáio estar logado para vizualizar suas próprias consultas!",
+                    ex
+                });
+            }
+        }
     }
 }

@@ -25,10 +25,7 @@ class cadastroConsulta extends Component{
 
     
 
-    novaConsulta = (event) => {
-
-        event.preventDefault();
-
+    novaConsulta = () => {
         this.setState({ isLoading : true });
 
         let dados = {

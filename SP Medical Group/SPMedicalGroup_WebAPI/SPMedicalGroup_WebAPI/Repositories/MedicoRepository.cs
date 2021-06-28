@@ -53,15 +53,5 @@ namespace SPMedicalGroup_WebAPI.Repositories
         {
             return ctx.Medicos.ToList();
         }
-
-        public List<Medico> ListarAssociado(int id)
-        {
-
-            return ctx.Medicos
-                .Include(m=> m.IdClinicaNavigation)
-                .Include(m => m.Consulta)
-                .Where(m => m.IdMedico == id)
-                .ToList();
-        }
     }
 }

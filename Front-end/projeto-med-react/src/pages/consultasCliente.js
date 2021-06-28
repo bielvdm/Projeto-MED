@@ -35,12 +35,16 @@ class consultaMedico extends Component{
         this.listarConsulta();
     }
 
+    logout = () => {
+        localStorage.removeItem('token-login')
+    }
+
     render(){
         return(
             <section>
                 <section className="header dis ali">
                 <img src={logo} alt="logo sp medical group"/>
-                <a href="/"><h3>Sair</h3></a>
+                <a onClick={this.logout} href="/"><h3>Sair</h3></a>
             </section>
 
             <section className="content-principal-medico dis">
@@ -49,7 +53,6 @@ class consultaMedico extends Component{
                         this.state.listaConsultas.map((consulta) => {
                             return(
                             <div className="content-consulta">
-                                    <a href="">+ Editar</a>
                                     <div className="linhaConsulta dis ali">
                                         <img src={calendario} alt="calendario"/>
                                         <p>{new Intl.DateTimeFormat('pt-BR').format(new Date(consulta.dataConsulta))}</p>

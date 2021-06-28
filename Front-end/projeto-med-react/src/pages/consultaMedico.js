@@ -8,17 +8,21 @@ import descricao from "../assets/img/align-left-solid 1 (1).png"
 import telefone from "../assets/img/image 1.png"
 import instagram from "../assets/img/image 2.png"
 import cadastros from "../assets/img/Área de cadastros (3) (1).png"
+import axios from 'axios';
 
 class consultaMedico extends Component{
     constructor(props){
         super(props);
         this.state = {
-            listaConsultas : []
+            listaConsultas : [],
+            idConsultaAlterada : 0,
+            descricao : ''
         }
     }
 
     listarConsulta = () =>{
-        fetch('https://localhost:5001/api/Consulta/suas', {
+
+        fetch('https://localhost:5001/api/Consulta/medicos', {
             headers : {
                 'Authorization' : 'Bearer ' + localStorage.getItem('token-login')
             }
@@ -35,12 +39,45 @@ class consultaMedico extends Component{
         this.listarConsulta();
     }
 
+    buscarIdConsulta = (consulta) => {
+        this.setState({idConsultaAlterada : consulta.idConsulta}, () => {console.log(this.state.idConsultaAlterada)})
+    }
+
+    atualizarDesc = (event) => {
+        
+        event.preventDefault();
+
+        axios.put('https://localhost:5001/api/Consulta/'+ this.state.idConsultaAlterada, 
+        {
+            sobreConsulta : this.state.descricao
+        })
+
+        .then(resposta => {
+            if(resposta.status === 200){
+                console.log('Descrição atualizada')
+            }
+        })
+
+        .catch(erro => console.log(erro))
+    }
+
+    atualizarState = (campo) => {
+        this.setState({[campo.target.name] : campo.target.value})
+    }
+
+    
+    logout = () => {
+        localStorage.removeItem('token-login')
+    }
+
+
     render(){
+        
         return(
             <section>
                 <section className="header dis ali">
                 <img src={logo} alt="logo sp medical group"/>
-                <a href="/"><h3>Sair</h3></a>
+                <a onClick={this.logout} href="/"><h3>Sair</h3></a>
             </section>
 
             <section className="content-principal-medico dis">
@@ -49,23 +86,39 @@ class consultaMedico extends Component{
                         this.state.listaConsultas.map((dados) => {
                             return(
                                 <div className="content-consulta">
-                                    <a href="">+ Editar</a>
+                                    <button onClick={() => this.buscarIdConsulta(dados)} className="buttonEditar">+ Editar</button>
                                     <div className="linhaConsulta dis ali">
                                         <img src={calendario} alt="calendario"/>
                                         <p>{new Intl.DateTimeFormat('pt-BR').format(new Date(dados.dataConsulta))}</p>
                                     </div>
                                     <div className="linhaConsulta dis ali">
                                         <img src={perfil} alt="perfil"/>
-                                        <p>ID do cliente: {dados.idCliente}</p>
+                                        <p>{dados.idClienteNavigation.nomeCliente}</p>
                                     </div>
                                     <div className="linhaConsulta dis ali">
                                         <img src={relogio} alt="relogio"/>
                                         <p>{dados.idSituacaoNavigation.nomeSituacao}</p>
                                     </div>
-                                    <div className="linhaDescricao dis">
-                                        <img src={descricao} alt="descricao"/>
-                                        <p>{dados.sobreConsulta}</p>
-                                    </div>
+                                    <form onSubmit = {this.atualizarDesc}>
+                                        <div className="linhaDescricao dis">
+                                            <img src={descricao} alt="descricao"/>
+                                            <p>{dados.sobreConsulta}</p>
+                                            
+                                        </div>
+                                        <div className = {this.state.idConsultaAlterada === 0? 'inputblock': 'inputnone'}>
+                                            <div className = "dis ali">
+
+                                                <input 
+                                                placeholder='Digite a nova descrição' 
+                                                type= 'text' value={this.state.descricao} 
+                                                name="descricao" 
+                                                onChange = {this.atualizarState}
+                                                className="inputDescricao"/>
+
+                                                <button type="submit" className= "bntDesc">Ok</button>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             )
                         })
@@ -93,6 +146,7 @@ class consultaMedico extends Component{
                     </div>
                 </div>
             </footer>
+
             </section>
         )
     }

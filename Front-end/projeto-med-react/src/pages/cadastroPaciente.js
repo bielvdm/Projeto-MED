@@ -4,7 +4,6 @@ import instagram from "../assets/img/image 2.png";
 import logo from "../assets/img/Logo (1).png";
 import cadastros from "../assets/img/Área de cadastros (1).png";
 import "./style.css";
-import axios from 'axios';
 
 class cadastroPaciente extends Component{
     constructor(props){

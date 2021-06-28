@@ -403,11 +403,17 @@ footer h4{
     flex-wrap: wrap;
 }
 
-.content-consulta a{
-    margin-left: 75%;
+.buttonEditar{
+    width: 100px;
+    margin-left: 60%;
     color: white;
     font-size: 10px;
-    text-decoration: none;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    font-family: 'montserrat';
+    border: none;
+    cursor:pointer;
+    overflow: hidden;        
 }
 
 .linhaConsulta{
@@ -425,11 +431,45 @@ footer h4{
 .linhaDescricao{
     align-items: flex-start;
     width: 190px;
-    height: 70px;
+    height: 100%;
     text-overflow: ellipsis;
     overflow: hidden;
 }
 
 .linhaDescricao p {
     font-size: 14px;
+}
+
+.inputDescricao{
+    width: 67%;
+    height: 18px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    font-family: 'montserrat';
+    padding-left: 8px;
+    font-size: 11px;
+    background-color: #f3f3f3;
+}
+
+.inputblock{
+    display: none;
+}
+
+.inputnone{
+    display: block;
+    margin-top: 5px;
+}
+
+.bntDesc{
+    width: 36px;
+    height: 20px;
+    outline: none;
+    text-align: center;
+    border: 0;
+    border-radius: 3px;
+    margin-left:  6px;
+    font-family: 'montserrat';
+    color: #333333;
+    background-color: #f3f3f3;
 }

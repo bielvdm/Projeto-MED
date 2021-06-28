@@ -6,11 +6,8 @@ import adm from "../assets/img/Foto escolha adm.png";
 import "./style.css";
 
 class telaADM extends Component{
-    constructor(props){
-        super(props);
-        this.state = {
-
-        }
+    logout = () => {
+        localStorage.removeItem('token-login')
     }
 
     render(){
@@ -18,7 +15,7 @@ class telaADM extends Component{
             <section>
                 <section className="header dis ali">
                 <img src={logo} alt="logo sp medical group"/>
-                <a href="/"><h3>Sair</h3></a>
+                <a onClick = {this.logout} href="/"><h3>Sair</h3></a>
             </section>
 
             <section class="content-principal-adm dis ali">
@@ -33,7 +30,7 @@ class telaADM extends Component{
                     </div>
 
                     <div>
-                        <a href=""><button>Novo ADM</button></a>
+                        <a href="/cadastroUsuario"><button>Novo usuário</button></a>
                         <a href="/cadastroConsulta"><button>Nova consulta</button></a>
                     </div>
 

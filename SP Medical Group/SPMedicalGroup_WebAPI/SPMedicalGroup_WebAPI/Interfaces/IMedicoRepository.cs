@@ -13,6 +13,5 @@ namespace SPMedicalGroup_WebAPI.Interfaces
         void Deletar(int id);
         void Atualizar(int id, Medico Dados);
         Medico BuscarId(int id);
-        List<Medico> ListarAssociado(int id);
     }
 }

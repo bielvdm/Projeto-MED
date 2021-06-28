@@ -50,8 +50,6 @@ class Login extends Component{
                 else {
                     this.props.history.push('/consultaCliente')
                 }
-                
-                console.log(parseJwt().role)
 
             }
         })

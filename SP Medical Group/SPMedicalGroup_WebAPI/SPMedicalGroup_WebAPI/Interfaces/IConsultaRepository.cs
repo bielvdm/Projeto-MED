@@ -11,6 +11,7 @@ namespace SPMedicalGroup_WebAPI.Interfaces
         List<Consultum> ListarTodos();
         void Cadastrar(Consultum Dados);
         List<Consultum> ListarProprias(int id);
+        List<Consultum> ListarPropriasMedicos (int id);
         void Deletar(int id);
         void Atualizar(int id, Consultum Dados);
         Consultum BuscarId(int id);

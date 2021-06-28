@@ -105,24 +105,5 @@ namespace SPMedicalGroup_WebAPI.Controllers
 
         }
 
-        [HttpGet("consultar")]
-        public IActionResult ListarAssociado ()
-        {
-            try
-            {
-                int idMedico = Convert.ToInt32(HttpContext.User.Claims.First(m => m.Type == JwtRegisteredClaimNames.Jti).Value);
-
-                return Ok(_medicoRepository.ListarAssociado(idMedico));
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(new
-                {
-                    mensagem = "Necessário fazer o login",
-                    ex
-                });
-            }
-
-        }
     }
 }

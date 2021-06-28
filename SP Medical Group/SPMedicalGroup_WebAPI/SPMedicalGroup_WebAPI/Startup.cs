@@ -45,16 +45,16 @@ namespace SPMedicalGroup_WebAPI
 
             services.AddSwaggerGen();
 
-            //cors lá
-            // services.AddCors(options => {
-            //     options.AddPolicy("CorsPolicy",
-            //         builder => {
-            //             builder.WithOrigins("http://localhost:3000")
-            //                                                         .AllowAnyHeader()
-            //                                                         .AllowAnyMethod();
-            //         }
-            //     );
-            // });
+            // cors lá
+            services.AddCors(options => {
+                options.AddPolicy("CorsPolicy",
+                    builder => {
+                        builder.WithOrigins("http://localhost:3000", "http://localhost:19006")
+                                                                    .AllowAnyHeader()
+                                                                    .AllowAnyMethod();
+                    }
+                );
+            });
 
             services.Configure<MailSettings>(Configuration.GetSection("MailSettings"));
 
@@ -106,7 +106,7 @@ namespace SPMedicalGroup_WebAPI
 
 
             //negocio do cors
-            // app.UseCors("CorsPolicy");
+            app.UseCors("CorsPolicy");
 
             app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 

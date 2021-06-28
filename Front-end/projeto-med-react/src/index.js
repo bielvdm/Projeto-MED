@@ -4,6 +4,7 @@ import {Route, BrowserRouter as Router, Switch} from 'react-router-dom';
 import cadastroConsulta from './pages/cadastroConsulta';
 import cadastroMedico from './pages/cadastroMedico';
 import cadastroPaciente from './pages/cadastroPaciente';
+import cadastroUsuario from './pages/cadastroUsuario';
 import consulta from './pages/consulta';
 import consultaMedico from './pages/consultaMedico';
 import consultasCliente from './pages/consultasCliente';
@@ -20,6 +21,7 @@ const rotas = (
       <Route path="/cadastroMedico" component={cadastroMedico} />
       <Route path="/cadastroConsulta" component={cadastroConsulta} />
       <Route path="/cadastroClinica" component={cadastroPaciente}/>
+      <Route path="/cadastroUsuario" component={cadastroUsuario}/>
       <Route path="/adm" component={telaADM} />
       <Route path="/consultaMedico" component={consultaMedico} />
       <Route path="/consultaCliente" component={consultasCliente} />
