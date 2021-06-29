@@ -22,6 +22,7 @@ namespace SPMedicalGroup_WebAPI.Controllers
             _clinicaRepository = new ClinicaRepository();
         }
 
+        [Authorize(Roles = "1")]
         [HttpGet]
         public IActionResult Get()
         {
@@ -37,6 +38,7 @@ namespace SPMedicalGroup_WebAPI.Controllers
 
         }
 
+        [Authorize(Roles = "1")]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
@@ -72,6 +74,7 @@ namespace SPMedicalGroup_WebAPI.Controllers
 
         }
 
+        [Authorize(Roles = "1")]
         [HttpPut("{id}")]
         public IActionResult Put(int id, Clinica Dados)
         {
@@ -88,6 +91,7 @@ namespace SPMedicalGroup_WebAPI.Controllers
             }
         }
 
+        [Authorize(Roles = "1")]
         [HttpGet("{id}")]
         public IActionResult GetId(int id)
         {

@@ -30,12 +30,12 @@ class telaADM extends Component{
                     </div>
 
                     <div>
-                        <a href="/cadastroUsuario"><button>Novo usuário</button></a>
+                        <a href="/cadastroUsuario"><button>Novo paciente</button></a>
                         <a href="/cadastroConsulta"><button>Nova consulta</button></a>
                     </div>
 
                     <div>
-                        <a href="/cadastroPaciente"><button>Novo paciente</button></a>
+                        <a href="/ListarPaciente"><button>Listar paciente</button></a>
                         <a href="/consulta"><button>Listar consultas</button></a>
                     </div>
                 </div>

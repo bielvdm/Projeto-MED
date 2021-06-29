@@ -2,11 +2,11 @@ import {Component} from 'react';
 import telefone from "../assets/img/image 1.png";
 import instagram from "../assets/img/image 2.png";
 import logo from "../assets/img/Logo (1).png";
-import logo2 from "../assets/img/Logo (2).png"
+// import logo2 from "../assets/img/Logo (2).png"
 import fotoLogin from "../assets/img/foto login.png"
 import banner from "../assets/img/Foto Banner.png"
 import "./style.css";
-import TextoSlide from '../components/carrossel';
+// import TextoSlide from '../components/carrossel';
 import axios from 'axios'
 import { parseJwt } from '../services/auth'
 
@@ -104,14 +104,14 @@ class Login extends Component{
 
             </section>
 
-            <section className="especialidades coluna ali">
+            {/* <section className="especialidades coluna ali">
 
                 <img src={logo2} alt="Logo da seção especialidades"/>
 
                 <div className="content-especialidades dis spa ">
                     <TextoSlide/>
                 </div>
-            </section>
+            </section> */}
 
             <footer id="footer" className="dis ali spaa">
 

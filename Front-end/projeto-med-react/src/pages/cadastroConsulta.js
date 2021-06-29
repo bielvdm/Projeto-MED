@@ -56,7 +56,9 @@ class cadastroConsulta extends Component{
     }
 
     listarMedicos = () =>{
-        fetch('https://localhost:5001/api/Medico')
+        fetch('https://localhost:5001/api/Medico',{ headers : {
+            'Authorization' : 'Bearer ' + localStorage.getItem('token-login') 
+        }})
 
         .then(resposta => resposta.json())
 
@@ -66,7 +68,9 @@ class cadastroConsulta extends Component{
     }
 
     listarPaciente = () =>{
-        fetch('https://localhost:5001/api/Cliente')
+        fetch('https://localhost:5001/api/Cliente',{ headers : {
+            'Authorization' : 'Bearer ' + localStorage.getItem('token-login') 
+        }})
 
         .then(resposta => resposta.json())
 
@@ -76,7 +80,9 @@ class cadastroConsulta extends Component{
     }
 
     listarSituacao = () =>{
-        fetch('https://localhost:5001/api/Situacao')
+        fetch('https://localhost:5001/api/Situacao',{ headers : {
+            'Authorization' : 'Bearer ' + localStorage.getItem('token-login') 
+        }})
 
         .then(resposta => resposta.json())
 

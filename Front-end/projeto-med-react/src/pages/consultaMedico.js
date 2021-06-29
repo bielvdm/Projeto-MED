@@ -43,22 +43,28 @@ class consultaMedico extends Component{
         this.setState({idConsultaAlterada : consulta.idConsulta}, () => {console.log(this.state.idConsultaAlterada)})
     }
 
-    atualizarDesc = (event) => {
+    atualizarDesc = async (event) => {
         
         event.preventDefault();
 
-        axios.put('https://localhost:5001/api/Consulta/'+ this.state.idConsultaAlterada, 
+        await axios.put('https://localhost:5001/api/Consulta/'+ this.state.idConsultaAlterada, 
         {
             sobreConsulta : this.state.descricao
-        })
+
+        }, { headers : {
+            'Authorization' : 'Bearer ' + localStorage.getItem('token-login') 
+        }})
 
         .then(resposta => {
             if(resposta.status === 200){
                 console.log('Descrição atualizada')
+                this.setState({idConsultaAlterada : 0})
             }
         })
 
         .catch(erro => console.log(erro))
+
+        this.listarConsulta()
     }
 
     atualizarState = (campo) => {
@@ -74,11 +80,31 @@ class consultaMedico extends Component{
     render(){
         
         return(
+            
             <section>
-                <section className="header dis ali">
-                <img src={logo} alt="logo sp medical group"/>
-                <a onClick={this.logout} href="/"><h3>Sair</h3></a>
-            </section>
+                <section className="header dis ali spa">
+                    <div className = "dis ali ">
+                        <img src={logo} alt="logo sp medical group"/>
+                        <a onClick={this.logout} href="/"><h3>Sair</h3></a>
+                    </div>
+
+                    <form onSubmit = {this.atualizarDesc}>
+                    <div className = {this.state.idConsultaAlterada === 0? 'inputblock': 'inputnone'}>
+                        <div className = "dis ali">
+
+                            <input 
+                            placeholder='Digite a nova descrição' 
+                            type= 'text' value={this.state.descricao} 
+                            name="descricao" 
+                            onChange = {this.atualizarState}
+                            className="inputDescricao"/>
+
+                            <button type="submit" className= "bntDesc">Ok</button>
+                        </div>
+                    </div>
+                </form>
+                </section>
+                
 
             <section className="content-principal-medico dis">
                 <div className="div-principal-consulta dis">
@@ -99,26 +125,11 @@ class consultaMedico extends Component{
                                         <img src={relogio} alt="relogio"/>
                                         <p>{dados.idSituacaoNavigation.nomeSituacao}</p>
                                     </div>
-                                    <form onSubmit = {this.atualizarDesc}>
-                                        <div className="linhaDescricao dis">
-                                            <img src={descricao} alt="descricao"/>
-                                            <p>{dados.sobreConsulta}</p>
-                                            
-                                        </div>
-                                        <div className = {this.state.idConsultaAlterada === 0? 'inputblock': 'inputnone'}>
-                                            <div className = "dis ali">
-
-                                                <input 
-                                                placeholder='Digite a nova descrição' 
-                                                type= 'text' value={this.state.descricao} 
-                                                name="descricao" 
-                                                onChange = {this.atualizarState}
-                                                className="inputDescricao"/>
-
-                                                <button type="submit" className= "bntDesc">Ok</button>
-                                            </div>
-                                        </div>
-                                    </form>
+                                    <div className="linhaDescricao dis">
+                                        <img src={descricao} alt="descricao"/>
+                                        <p>{dados.sobreConsulta}</p>       
+                                    </div>
+                                    
                                 </div>
                             )
                         })

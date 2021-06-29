@@ -51,7 +51,9 @@ class cadastroMedico extends Component{
     }
 
     listarEspecializacao = () =>{
-        fetch('https://localhost:5001/api/Especializacao')
+        fetch('https://localhost:5001/api/Especializacao',{ headers : {
+            'Authorization' : 'Bearer ' + localStorage.getItem('token-login') 
+        }})
 
         .then(resposta => resposta.json())
 
@@ -61,7 +63,9 @@ class cadastroMedico extends Component{
     }
 
     listarClinica = () =>{
-        fetch('https://localhost:5001/api/Clinica')
+        fetch('https://localhost:5001/api/Clinica',{ headers : {
+            'Authorization' : 'Bearer ' + localStorage.getItem('token-login') 
+        }})
 
         .then(resposta => resposta.json())
 
@@ -71,7 +75,9 @@ class cadastroMedico extends Component{
     }
 
     listarTipoUsuario = () =>{
-        fetch('https://localhost:5001/api/TipoUsuario')
+        fetch('https://localhost:5001/api/TipoUsuario',{ headers : {
+            'Authorization' : 'Bearer ' + localStorage.getItem('token-login') 
+        }})
 
         .then(resposta => resposta.json())
 

@@ -13,7 +13,9 @@ class consulta extends Component{
     }
 
     listarConsulta = () =>{
-        fetch('https://localhost:5001/api/Consulta')
+        fetch('https://localhost:5001/api/Consulta',{ headers : {
+            'Authorization' : 'Bearer ' + localStorage.getItem('token-login') 
+        }})
 
         .then(resposta => resposta.json())
 

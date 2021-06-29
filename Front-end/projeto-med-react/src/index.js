@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {Route, BrowserRouter as Router, Switch} from 'react-router-dom';
 import cadastroConsulta from './pages/cadastroConsulta';
 import cadastroMedico from './pages/cadastroMedico';
-import cadastroPaciente from './pages/cadastroPaciente';
+import ListarPaciente from './pages/ListarPaciente';
 import cadastroUsuario from './pages/cadastroUsuario';
 import consulta from './pages/consulta';
 import consultaMedico from './pages/consultaMedico';
@@ -17,10 +17,10 @@ const rotas = (
     <Switch>
       <Route exact path="/" component={Login} />
       <Route path="/consulta" component={consulta} />
-      <Route path="/cadastroPaciente" component={cadastroPaciente} />
+      <Route path="/ListarPaciente" component={ListarPaciente} />
       <Route path="/cadastroMedico" component={cadastroMedico} />
       <Route path="/cadastroConsulta" component={cadastroConsulta} />
-      <Route path="/cadastroClinica" component={cadastroPaciente}/>
+      <Route path="/cadastroClinica" component={ListarPaciente}/>
       <Route path="/cadastroUsuario" component={cadastroUsuario}/>
       <Route path="/adm" component={telaADM} />
       <Route path="/consultaMedico" component={consultaMedico} />

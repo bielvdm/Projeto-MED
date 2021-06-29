@@ -138,6 +138,7 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     height: 285px;
     font-family: 'Montserrat';
+    margin-bottom: 20px;
 }
 
 /* especialides */
@@ -226,6 +227,10 @@ footer h4{
     padding-top: 15px;
 }
 
+.headerContent {
+    background-color: #1b1d1f;
+}
+
 .header a{
     margin-left: 30px;
     text-decoration: none;
@@ -274,6 +279,16 @@ footer h4{
     padding-bottom: 30px;
 }
 
+.inputs-cadastro-paciente{
+    width: 70%;
+    height: 300px;
+    padding-bottom: 30px;
+}
+
+.contentCadastroPaciente {
+    width: 60%;
+}
+
 .input{
     width: 280px;
     height: 35px;
@@ -298,8 +313,22 @@ footer h4{
     font-family: 'Montserrat';
 }
 
+.select2{
+    width: 280px;
+}
+
 .inputs-cadastro button {
     width: 100px;
+    height: 35px;
+    font-family: 'Montserrat';
+    font-size: 13px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: #0270CF;
+}
+.inputs-cadastro-paciente button {
+    width: 130px;
     height: 35px;
     font-family: 'Montserrat';
     font-size: 13px;
@@ -314,7 +343,17 @@ footer h4{
     font-family: 'montserrat';
 }
 
+.content-principal-cadastroUser {
+    align-items: flex-end;
+    font-family: 'montserrat';
+}
+
 .content-principal-cadastro img{
+    width: 400px;
+    height: 280px;
+}
+
+.imagemCadastro{
     width: 400px;
     height: 280px;
 }
@@ -335,6 +374,15 @@ footer h4{
     font-family: 'Montserrat';
 }
 
+.buttonLista{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    font-family: 'montserrat';
+}
 .pesquisaListar img{
     position: absolute;
     margin-left: 260px;
@@ -462,8 +510,8 @@ footer h4{
 }
 
 .bntDesc{
-    width: 36px;
-    height: 20px;
+    width: 50px;
+    height: 37px;
     outline: none;
     text-align: center;
     border: 0;
@@ -472,4 +520,10 @@ footer h4{
     font-family: 'montserrat';
     color: #333333;
     background-color: #f3f3f3;
+}
+
+.trash{
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
 }

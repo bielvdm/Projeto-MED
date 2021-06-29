@@ -1,4 +1,5 @@
-﻿using SPMedicalGroup_WebAPI.Contexts;
+﻿using Microsoft.EntityFrameworkCore;
+using SPMedicalGroup_WebAPI.Contexts;
 using SPMedicalGroup_WebAPI.Domains;
 using SPMedicalGroup_WebAPI.Interfaces;
 using System;
@@ -53,7 +54,9 @@ namespace SPMedicalGroup_WebAPI.Repositories
 
         public List<Cliente> ListarTodos()
         {
-            return ctx.Clientes.ToList();
+            return ctx.Clientes
+                .Include(c=> c.IdUsuarioNavigation)
+                .ToList();
         }
     }
 }
